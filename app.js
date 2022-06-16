@@ -45,4 +45,26 @@ console.log(spinWords("Hey fellow warriors"))
 // conclusion: learned about ternary operators, and wrote my code in a way that I seen on codewars, which was chaining my methods and writing shorter solutions.
 
 // June 16, 2022
-//
+
+//#1
+/*You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.*/
+function likes(names) {
+	if(names.length == 0){
+		return "no one likes this";
+	} else if(names.length == 1){
+		return names.join("") + " likes this";
+	} else if(names.length < 4){
+		return lessThanFour(names)
+	} else if(names.length >= 4){
+		return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+	} 
+}
+function lessThanFour(names){
+	 if(names.length == 2){
+     return names.join(" and ") + " like this"
+   } else if(names.length == 3){
+     return `${names[0]}, ${names[1]} and ${names[2]} like this`
+   }
+}
+//console.log(likes(['Alex', 'Jacob', 'Mark', 'William', 'Illumi', 'Valencia']))
+/* conclusion: This one was a little more challenging for me. I figured out htat if there isnt a short way to do it, figure out how to do it the long way.
