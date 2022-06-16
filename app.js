@@ -67,4 +67,4 @@ function lessThanFour(names){
    }
 }
 //console.log(likes(['Alex', 'Jacob', 'Mark', 'William', 'Illumi', 'Valencia']))
-/* conclusion: This one was a little more challenging for me. I figured out htat if there isnt a short way to do it, figure out how to do it the long way.
+// conclusion: This one was a little more challenging for me. I figured out htat if there isnt a short way to do it, figure out how to do it the long way.
