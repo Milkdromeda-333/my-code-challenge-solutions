@@ -31,7 +31,7 @@ function findOutlier(integers){
 //console.log(findOutlier([2, 4, 6, 8, 5]))
 /*Conclusion: Here I learned to use Number() to turn number array elements into a number. I also learned that a switch is seeing if the case is equal to the switch expression.*/
 
-/* #3
+/* #4
 
 I was supposed t o be able to take an array of words and whichhever words were five letters or longer i had to retern it reversed.*/
 function spinWords(string){
