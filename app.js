@@ -1,7 +1,8 @@
 /* June 15, 2022
 
 #1 
-Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.*/
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. 
+Essentially, rearrange the digits to create the highest possible number.*/
 
 function descendingOrder(n){
   //first i will split the number into strings, sort them, then return them concattted togthr.
@@ -12,11 +13,14 @@ function descendingOrder(n){
   return Number(result);
 }
 // console.log(descendingOrder(12595))
-/*conclusion: here i started with a general plan because i had no immediate thought on how to complete this task. I broke it down into bigger chunks to be broken down ino smaller chunks. I practiced using .join(), and used codepen to do my own testing when needed. */
+/*conclusion: here i started with a general plan because i had no immediate thought on how to complete this task. 
+I broke it down into bigger chunks to be broken down ino smaller chunks. I practiced using .join(), and used codepen to do my own testing when needed. */
 
 //#2
 
-/*You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.*/
+/*You are given an array (which will have a length of at least 3, but could be very large) containing integers. 
+The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. 
+Write a method that takes the array as an argument and returns this "outlier" N.*/
 function findOutlier(integers){
   const evenNums = integers.filter(num => num % 2 === 0);
   const oddNums = integers.filter(num => num % 2 !== 0);
@@ -46,8 +50,9 @@ console.log(spinWords("Hey fellow warriors"))
 
 // June 16, 2022
 
-//#1
-/*You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.*/
+//#5
+/*You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. 
+We want to create the text that should be displayed next to such an item.*/
 function likes(names) {
 	if(names.length == 0){
 		return "no one likes this";
@@ -68,3 +73,18 @@ function lessThanFour(names){
 }
 //console.log(likes(['Alex', 'Jacob', 'Mark', 'William', 'Illumi', 'Valencia']))
 // conclusion: This one was a little more challenging for me. I figured out htat if there isnt a short way to do it, figure out how to do it the long way.
+
+// #6
+/* A Narcissistic Number is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base.
+In this Kata, we will restrict ourselves to decimal (base 10).*/
+function narcissistic(value) {
+ 	/* split the numbers somehow into an array
+      use .map() to create an arr that has the num of each element to the power of its base
+      add these numbers up and if the sum equals the vslue return true*/
+	const stringArr = value.toString().split("");
+	const numArr = stringArr.map(num => Number(num) ** stringArr.length);
+	const sum = numArr.reduce((a, b) => a + b);
+	return sum === value ? true : false;
+}
+console.log(narcissistic(153))
+// conclusion: very happy with my use of the ternary operator, AND reduce here.
