@@ -82,9 +82,9 @@ function narcissistic(value) {
       use .map() to create an arr that has the num of each element to the power of its base
       add these numbers up and if the sum equals the vslue return true*/
 	const stringArr = value.toString().split("");
-	const numArr = stringArr.map(num => Number(num) ** stringArr.length);
+	const numArr = stringArr.map(num => Math.pow(Number(num), stringArr.length)); 
 	const sum = numArr.reduce((a, b) => a + b);
 	return sum === value ? true : false;
 }
 console.log(narcissistic(153))
-// conclusion: very happy with my use of the ternary operator, AND reduce here.
+// conclusion: very happy with my use of the ternary operator, AND reduce here. And, I learned about Math.pow().
