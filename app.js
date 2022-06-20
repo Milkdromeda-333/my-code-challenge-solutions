@@ -117,4 +117,28 @@ console.log(number([
 	[3, 5],
 	[5, 8]
 ]));
-/* conclusion: AFter a couplr of faile attmepts of codewars cahllenges I finally succeeded with one. Very happy with how fast i figured it out.
+/* conclusion: AFter a couplr of faile attmepts of codewars cahllenges I finally succeeded with one. Very happy with how fast i figured it out.*/
+
+// June 20
+
+//#8
+//Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+function humanReadable(seconds) {
+	/*
+	convert seconds into hours. save to variable. then ill take the hours turn it into seconds and subtract that from the og seconds to see the remaining time to be converted to minutes.
+	to get minutes i convert remaining seconds into minutes, take that number convert it into seconds, subtract that from the og seconds, and that number will be declared as seconds. 
+	return a string literal 
+	*/
+	if (seconds === 0) {
+		return "00:00:00";
+	}
+	const hours = Math.trunc(seconds / 3600);
+	const minutes = Math.trunc((seconds - hours * 3600) / 60);
+	const resultSeconds = Math.trunc(seconds - (minutes * 60 + hours * 3600));
+	return `${hours.toString().padStart(2, 0)}:${minutes
+		.toString()
+		.padStart(2, 0)}:${resultSeconds.toString().padStart(2, 0)}`;
+}
+console.log(humanReadable(20));
+/*conclusion: This one was tough!!! But, I am very proud that I was able to stick with it and not give up very easily.
+Its cluncky, mit could most definately be refactored. I learned to use .padStart and Math.trunc*/
