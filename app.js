@@ -142,3 +142,12 @@ function humanReadable(seconds) {
 console.log(humanReadable(20));
 /*conclusion: This one was tough!!! But, I am very proud that I was able to stick with it and not give up very easily.
 Its cluncky, mit could most definately be refactored. I learned to use .padStart and Math.trunc*/
+
+//June 22
+
+//9
+//Arr.dif - Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+//It should remove all values from list a, which are present in list b keeping their order.
+const arrayDiff = (a, b) => a.filter(num => !b.includes(num));
+console.log(arrayDiff([1,2,2], [1]))
+//conclusion: fairly easy. had to learn to use .includes and remmeber to use the logical not operator
