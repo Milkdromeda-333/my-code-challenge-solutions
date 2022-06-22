@@ -151,3 +151,13 @@ Its cluncky, mit could most definately be refactored. I learned to use .padStart
 const arrayDiff = (a, b) => a.filter(num => !b.includes(num));
 console.log(arrayDiff([1,2,2], [1]))
 //conclusion: fairly easy. had to learn to use .includes and remmeber to use the logical not operator
+
+//#10
+//Create Phone Number - Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+function createPhoneNumber(numbers){
+	// split array into threes, return a string with everything in place  and the arrays joined
+	let [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10] = numbers;
+	return `(${num1}${num2}${num3}) ${num4}${num5}${num6}-${num7}${num8}${num9}${num10}`;
+}
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+// conclusion: its kind of long winded and im not sure its the best solution, but i decided to do the long route since i couldn't think of a simpler route.
