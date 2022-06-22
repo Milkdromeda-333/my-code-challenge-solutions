@@ -159,5 +159,14 @@ function createPhoneNumber(numbers){
 	let [num1, num2, num3, num4, num5, num6, num7, num8, num9, num10] = numbers;
 	return `(${num1}${num2}${num3}) ${num4}${num5}${num6}-${num7}${num8}${num9}${num10}`;
 }
+// refactor
+function createPhoneNumber(numbers){
+	let result = "(xxx) xxx-xxxx";
+	for(let i = 0; i < numbers.length; i++){
+		result = result.replace("x", numbers[i])
+	};
+	return result
+}
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 // conclusion: its kind of long winded and im not sure its the best solution, but i decided to do the long route since i couldn't think of a simpler route.
+// after submitting i discovered string.replace(). very handy.
