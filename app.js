@@ -170,3 +170,43 @@ function createPhoneNumber(numbers){
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 // conclusion: its kind of long winded and im not sure its the best solution, but i decided to do the long route since i couldn't think of a simpler route.
 // after submitting i discovered string.replace(). very handy.
+
+// July, 2, 2022
+
+// #11
+//PrintErrors ---
+function printerError(str) {
+	// print out the errors / total num of color letters
+	// make an array of letters between a-m, declare variable called errorCount
+	// and make iterate through the string and if it does not match an element in the array
+	// add one to the error counter.
+	// then obviously return a string literal with the fraction
+	
+	const legalLetters = [
+	"a",
+	"b",
+	"c",
+	"d",
+	"e",
+	"f",
+	"g",
+	"h",
+	"i",
+	"j",
+	"k",
+	"l",
+	"m"
+];
+	let errorCount = 0;
+
+	for (let i = 0; i < str.length; i++) {
+		if (legalLetters.indexOf(str[i]) === -1) {
+			errorCount++;
+		}
+	}
+	return `${errorCount}/${str.length}`;
+}
+ console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
+
+/*Conclusion: I learned that if im having a hard time handling squashing a bug to console.log
+like crazy and if push comes to shove, read line-by-line to ensure everything is in place and works the way i intend*/
