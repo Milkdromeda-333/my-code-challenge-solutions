@@ -210,3 +210,25 @@ function printerError(str) {
 
 /*Conclusion: I learned that if im having a hard time handling squashing a bug to console.log
 like crazy and if push comes to shove, read line-by-line to ensure everything is in place and works the way i intend*/
+
+// July 25
+// #12
+// Exes and Ohs
+
+function XO(str) {
+	const fixedStr = str.toLowerCase();
+	let xCount = 0;
+	let oCount = 0;
+	
+	for(let char of fixedStr){
+		if(char === "x"){
+			xCount++
+		}
+		if(char === "o"){
+			oCount++
+		}
+	}
+	
+	return xCount === oCount ? true : false;
+// conclusion: remmeber to return your ternary operater statements! And, for this I had to google my problem as I seen it,
+//"why is my ternary operator returning undefined" and stackoverflow had the answer!
