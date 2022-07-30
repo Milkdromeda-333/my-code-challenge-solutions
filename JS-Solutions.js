@@ -212,8 +212,7 @@ function printerError(str) {
 like crazy and if push comes to shove, read line-by-line to ensure everything is in place and works the way i intend*/
 
 // July 25
-// #12
-// Exes and Ohs
+// #12 Exes and Ohs
 
 function XO(str) {
 	const fixedStr = str.toLowerCase();
@@ -230,5 +229,35 @@ function XO(str) {
 	}
 	
 	return xCount === oCount ? true : false;
+}
 // conclusion: remmeber to return your ternary operater statements! And, for this I had to google my problem as I seen it,
 //"why is my ternary operator returning undefined" and stackoverflow had the answer!
+
+//July 30
+
+//#13 Help Suzuki rake his garden!
+
+function rakeGarden(garden) {
+  let arr = garden.split(" ")
+  let result = []
+  arr.forEach(item => {
+	  if (item === "rock" || item === "gravel"){
+		  result.push(item)
+	  } else {
+		  result.push("gravel")
+	  }
+  })
+	return result.join(" ");
+}
+let garden1 = 'slug spider rock gravel gravel gravel gravel gravel gravel gravel';
+console.log(rakeGarden(garden1))
+
+/*const rakeGarden = garden => 
+  garden
+    .split(' ')
+    .map(item => item === 'rock' ? 'rock' : 'gravel')
+    .join(' ')*/
+
+//conclusion: i almost gave up with this one for diiferent little reasons but didn't want to. And, it worked out eventually. 
+//i had a plan that did not work out first try, i had myself to do a different plan that i thought of while initially planning.
+// i also added someone elses answer for me to get inspo from and look back at
