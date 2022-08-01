@@ -233,6 +233,7 @@ function XO(str) {
 // conclusion: remmeber to return your ternary operater statements! And, for this I had to google my problem as I seen it,
 //"why is my ternary operator returning undefined" and stackoverflow had the answer!
 
+
 //July 30
 
 //#13 Help Suzuki rake his garden!
@@ -261,3 +262,28 @@ console.log(rakeGarden(garden1))
 //conclusion: i almost gave up with this one for diiferent little reasons but didn't want to. And, it worked out eventually. 
 //i had a plan that did not work out first try, i had myself to do a different plan that i thought of while initially planning.
 // i also added someone elses answer for me to get inspo from and look back at
+
+
+// August 1 #14 V A P O R C O D E
+function vaporcode(string) {
+	let arr = string.toUpperCase().split("");
+	let result = [];
+	arr.map(letter => {
+		if(letter === " "){
+			return;
+		}else{
+			result.push(` ${letter} `);
+		}
+			
+	})
+	return result.join("").slice(1, -1);
+}
+vaporcode("Why isn't my code working?");
+/*function vaporcode(string) {
+  return string.toUpperCase().split(" ").join("").split("").join("  ");
+}
+This is so smart they put it into line by splitting it by the spaces so as to not have to do it almost manually, and then joined it to 
+be able to then join it to split it by each element and then joined it finally with two spaces between each element. so clever!*/
+
+// conclusion: things dont usually pan-out the way i plan them out. with practice i think i will find a better way to plan out my code.
+//but, i learned to test multiple-times and try things out no matter how cluncky.
