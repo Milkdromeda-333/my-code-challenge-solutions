@@ -287,3 +287,23 @@ be able to then join it to split it by each element and then joined it finally w
 
 // conclusion: things dont usually pan-out the way i plan them out. with practice i think i will find a better way to plan out my code.
 //but, i learned to test multiple-times and try things out no matter how cluncky.
+
+
+//August 21 - #15 - (7 kyu) Find the capitals
+const capitals = (word) => {
+	
+	let resultArr = [];
+	
+	for(let char of word){
+		if(char === char.toUpperCase()){
+			resultArr.push(word.indexOf(char));
+		}
+	}
+	
+	return resultArr
+	
+};
+/*conclusion: I had to slow down and allow myself to clearly think of what steps I wanted to take, and to study those steps. So, I started 
+  with the last step, how can i actually return what i nee to return. how do i get that data. and then, how do i make it so that i could get this data, 
+  and what errors could I run into using this method. I also started very differently, but couldn't finish how I started so I scrapped it andstarted anew. 
+*/
