@@ -307,3 +307,12 @@ const capitals = (word) => {
   with the last step, how can i actually return what i nee to return. how do i get that data. and then, how do i make it so that i could get this data, 
   and what errors could I run into using this method. I also started very differently, but couldn't finish how I started so I scrapped it andstarted anew. 
 */
+
+
+//August 24 - #16 List filtering
+const filter_list = (arr) => arr.filter(element => typeof element === "number");
+return filter_list([0, 1, "a", "b"])
+
+//conclusion: although the solution shouldve been obvious, I didn't use filter method at first. I did something a bit more long winded. I wish I had a good
+//problem solving strategy to be more organized with solving these. Like, I should brainstorm first right. Lay the poblem out before me, and then think of what
+//exactly im trying to do, and then the ways I could do it, and whats important while writing it.
