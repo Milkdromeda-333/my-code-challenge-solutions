@@ -316,3 +316,23 @@ return filter_list([0, 1, "a", "b"])
 //conclusion: although the solution shouldve been obvious, I didn't use filter method at first. I did something a bit more long winded. I wish I had a good
 //problem solving strategy to be more organized with solving these. Like, I should brainstorm first right. Lay the poblem out before me, and then think of what
 //exactly im trying to do, and then the ways I could do it, and whats important while writing it.
+
+
+//August 30 - #17 unique in order
+const uniqueInOrder=function(iterable){
+  
+	const arr = [...iterable];
+	return arr.filter((letter, index) => {
+		return letter !== arr[index - 1]
+	})
+	
+	
+}
+/*
+console.log(uniqueInOrder('ABBCcAD'))
+desired output: ['A','B','C','D','A','B']
+
+conclusion: SO, I'm trying to learn a method to approach these. I did an explanation for the function first (may be uneccessary) and then I planned out what I would do
+in the function. What saved me was googling. I googled the docs for the method, and googled how to use the index parameter and seen that i was using it right, just
+I was getting an empty array because I didnt return anything. 
+*/
