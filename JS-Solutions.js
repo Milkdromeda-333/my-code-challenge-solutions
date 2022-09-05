@@ -336,3 +336,20 @@ conclusion: SO, I'm trying to learn a method to approach these. I did an explana
 in the function. What saved me was googling. I googled the docs for the method, and googled how to use the index parameter and seen that i was using it right, just
 I was getting an empty array because I didnt return anything. 
 */
+
+// September 5 - #18 How good are you, really?
+
+function betterThanAverage(classPoints, yourPoints) {
+  
+// 	this line adds the numbers in classPoints and your points togther
+	const sum = classPoints.reduce((prevNum, currentNum) => currentNum + prevNum)
+	+ yourPoints;
+	const average =  sum / (classPoints.length + 1)
+	 return average > yourPoints ? false : true
+}
+
+/*
+console.log(betterThanAverge([2, 3], 5))
+Conclusion: I wasstuck on this until I asked a fellow coder for help and realized that if I'm using multiple operators I should specify which one I wan't to run first
+using a parenthasis. 
+*/
