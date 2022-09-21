@@ -36,3 +36,35 @@ function mapLetters(str) {
 /* 
 Conclusion: I tried a new way of problem solving by writing the task at hand, noting my initial thought of how I will complete the task, and finally writing a list of steps to take and sudo code. It worked great and help me stay on track and remember my initial solutions to potential problems. 
 */
+
+/*
+#2 Remove Every Vowel from a String - September 21, 2022
+Create a function that takes a string and returns a new string with all vowels removed.
+*/
+function removeVowels(str){
+	//tasks take a string, filter out the vowels, return string
+	// idea: convert string to an array, split by each charecter, filter out vowels using an array with vowels, turn the filtered array back into a string, return
+	// 1. make a vowels array.
+	// 2. split by each charecter so arr.split("")
+	// 3. filter the arr using filter(char => vowels.includes(char) ? false : true) save to filteredArr 
+	// 4. turn ilteredArr into string using .join("")
+	
+	const vowelsArr = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+	const strArr = [...str];
+	const filteredArr = strArr.filter(char => vowelsArr.includes(char) ? false : true)
+	console.log(filteredArr.join(""))
+}
+// removeVowels("I have never seen a thin person drinking Diet Coke.")
+// ➞ " hv nvr sn  thn prsn drnkng Dt Ck."
+
+// removeVowels("We're gonna build a wall!")
+// ➞ "W'r gnn bld  wll!"
+
+// removeVowels("Happy Thanksgiving to all--even the haters and losers!")
+// ➞ "Hppy Thnksgvng t ll--vn th htrs nd lsrs!"
+
+/*
+conclusion: I basically have my code solution problem solving flow down to this- write out the basic tasks that need to be done, labeled TASKS. Write out 
+an idea that i can implement to complete said tasks, labeled IDEA (i can write multiple ideas if i have them). And finally, i write out the steps to the 
+idea that I'm going with. Can be labeled STEPS. Anyway, the more that I solve these problems the more I am quick with thinking of ways to solve new ones, because of my familiarity with how to do a certain task with JS.
+*/
