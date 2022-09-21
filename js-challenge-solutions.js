@@ -38,7 +38,7 @@ Conclusion: I tried a new way of problem solving by writing the task at hand, no
 */
 
 /*
-#2 Remove Every Vowel from a String - September 21, 2022
+#2 Remove Every Vowel from a String - September 21, 2022 ////////////////////////////////////////////////////////////////////////////////////////////
 Create a function that takes a string and returns a new string with all vowels removed.
 */
 function removeVowels(str){
