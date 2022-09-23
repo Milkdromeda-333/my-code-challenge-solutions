@@ -68,3 +68,26 @@ conclusion: I basically have my code solution problem solving flow down to this-
 an idea that i can implement to complete said tasks, labeled IDEA (i can write multiple ideas if i have them). And finally, i write out the steps to the 
 idea that I'm going with. Can be labeled STEPS. Anyway, the more that I solve these problems the more I am quick with thinking of ways to solve new ones, because of my familiarity with how to do a certain task with JS.
 */
+
+// #3 Caesars Cipher - september 22, 2022
+// My challenge was to implement a caesars cipher using readline-sync module in node.
+var readline = require('readline-sync');
+
+const input = readline.question('What phrase would you like to encrypt? ').toLowerCase();
+const shift = parseInt(readline.question('How many letters would you like to shift? '));
+console.log(cipher(input, shift));
+
+function cipher(userInput, shiftNum) {
+    let letters = [..."abcdefghijklmnopqrstuvwxyz"];
+
+    const code = [...userInput].map(char => {
+        if (letters.includes(char)) {
+            return letters[letters.indexOf(char) + shiftNum];
+
+        } else {
+            return char;
+        }
+
+    });
+    return code.join("");
+}
