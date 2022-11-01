@@ -1,5 +1,5 @@
 /*
-# 21 Find the divisors 7kyu
+# 22 Find the divisors 7kyu
 
 TASK:
 return an array populated with the `interger`s divisors from smallest to largest, if its a prime number return "`num` is a prime number"
