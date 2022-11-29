@@ -14,7 +14,8 @@ PROB: need to validate each 3x3.... this call back func is gonna be a DOOZY.
 to validte the 3x3's ill need to check the array by threes, and against each other! 
 
 The logic will be like:
-for each two arrays(divide the num of arrays by two? or manually set this up?), get the first three boxes, and validate the mumbers(this should be its own callback func), after this is validates, check the next three, and again.
+for each two arrays(divide the num of arrays by two? or manually set this up?), get the first three boxes, and validate the 
+mumbers(this should be its own callback func), after this is validates, check the next three, and again.
 
 if all checksout, the board is valid!!1
 */
@@ -41,7 +42,8 @@ function isValidSudoku(board) {
     const subBoxesArrays = () => {
         const resultArr = [];
 
-        // i for the index of the board, j for the index inside the board, i could not figure any way to not literally brute force this solution, hence the huge switch case 😞
+        // i for the index of the board, j for the index inside the board, i could not figure any way to not literally brute force
+        // this solution, hence the huge switch case 😞
         for (let i = 0; i <= 8; i++) {
             let pushedArr = [];
             switch (i) {
@@ -157,5 +159,8 @@ console.log(isValidSudoku(board));
 
 /*
 Conclusion:
-This was difficult, but I had a blast. When I took on the challenge I was unsure that I would be able to complete it, but with effort and the spirit of competition wit hmyself, I was able to succeed. I started with ideation because I seriously had no idea how I would even start such a task as this. I started by breaking down what can be done, and I slowly had more ideas on how to complete them.
+This was difficult, but I had a blast. When I took on the challenge I was unsure that I would be able to complete it, 
+but with effort and the spirit of competition wit hmyself, I was able to succeed. I started with ideation because I seriously
+had no idea how I would even start such a task as this. I started by breaking down what can be done, and I slowly had more ideas 
+on how to complete them.
 */
