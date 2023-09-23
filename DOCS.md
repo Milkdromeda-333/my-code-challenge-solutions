@@ -1,0 +1,2 @@
+- After each step make sure that you are on the right track by logging the results. (Before logging, remember what you are expecting to log to look like!!!!!)
+- Make sure you know exactly what you re returning.
